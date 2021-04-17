@@ -1,0 +1,19 @@
+<h1>Pricing Page</h1>
+
+<h2>Subscribe Now</h2>
+
+<ul>
+  <% @prices.each do |price| %>
+    <li><%= price %> Euros</li>
+  <% end %>
+</ul>
+
+
+<h1>Tell us what you think</h1>
+<form action="/pricing" method="get">
+  <input type="text" name="price" placeholder="What do you think about our prices?">
+  <input type="text" name="rating" placeholder="How do you rate our price?">
+  <input type="submit">
+</form>
+
+<%= link_to "Back Home", root_path %>
